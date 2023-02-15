@@ -7,6 +7,16 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <StackPanel Height="430" Width="780">
+            <TextBox 
+                    Name="NotepadTextBox" 
+                    Height="425" 
+                    Width="775" 
+                    VerticalScrollBarVisibility="Auto" 
+                    HorizontalScrollBarVisibility="Auto"
+                    TextWrapping="Wrap"
+                    TextChanged="NotepadTextBox_OnTextChanged">
+            </TextBox>
+        </StackPanel>
     </Grid>
 </Window>

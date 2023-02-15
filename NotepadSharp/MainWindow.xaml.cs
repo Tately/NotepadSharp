@@ -20,9 +20,18 @@ namespace NotepadSharp
     /// </summary>
     public partial class MainWindow : Window
     {
+        private readonly TextHandler _textHandler;
+        
         public MainWindow()
         {
             InitializeComponent();
+            
+            _textHandler = TextHandler.GetTextHandler();
+        }
+
+        private void NotepadTextBox_OnTextChanged(object sender, TextChangedEventArgs e)
+        {
+            _textHandler.Text = NotepadTextBox.Text;
         }
     }
 }
